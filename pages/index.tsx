@@ -1,33 +1,46 @@
 import Container from "../components/container";
 import Image from "next/image";
+import { BsTwitterX } from "react-icons/bs";
 
 function HomePage() {
   return (
     <>
       <Container>
-        <div className="space-y-6">
-          <h1 className="text-2xl font-bold">
-            Hey, I'm a Senior Software Engineer at Company. I enjoy working with
-            Next.js and crafting beautiful front-end experiences.
-          </h1>
-          <p>
-            This portfolio is built with Next.js and a library called next-mdx.
-            It allows you to write Markdown and focus on the content of your
-            portfolio.
-          </p>
-
-          <p>Deploy your own in a few minutes.</p>
+        <div className="flex justify-center">
+          <Image
+            src="/my_profile.JPG"
+            alt="profile"
+            width={200}
+            height={200}
+            className="rounded-full mt-6 rounded-lg shadow-xl"
+          />
         </div>
       </Container>
+      <Container>
+        <div className="space-y-6">
+          <h1 className="text-2xl font-bold">プッシュブログ</h1>
+          <p>
+            どうもプッシュです。新卒2年目のエンジニアで、普段はPHPを書いてます。
+            <br />
+            このブログでは、勉強したことや気になったことを投稿する個人ブログです。
+            <br />
+            まだまだ未熟なエンジニアですが、日々成長していきます。
+          </p>
 
-      <div className="container max-w-4xl m-auto px-4 mt-20">
-        <Image
-          src="/desk.jpg"
-          alt="my desk"
-          width={1920 / 2}
-          height={1280 / 2}
-        />
-      </div>
+          <ul className="list-disc">
+            <h3 className="text-lg font-bold">Like</h3>
+            <li>サッカー</li>
+            <li>スイーツ</li>
+            <li>旅行</li>
+          </ul>
+
+          <h3 className="text-lg font-bold">Links</h3>
+          <br />
+          <a target="_blank" href="https://x.com/push_gawa">
+            <BsTwitterX className="bg-black text-slate-200" />
+          </a>
+        </div>
+      </Container>
     </>
   );
 }
